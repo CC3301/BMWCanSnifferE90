@@ -1,0 +1,19 @@
+{
+  "0x1B4": {
+    "clen": 8,
+    "desc": "Speed in MPH and Handbrake Staus",
+    "source": "Kombi",
+    "data_frames": {
+      "0": {
+        "length": 2,
+        "desc": "Speed (MPH)",
+        "phonetic_name": "vehicle_speed_mph"
+      },
+      "5": {
+        "length": 1,
+        "desc": "Handbrake Status",
+        "phonetic_name": "handbrake_status"
+      }
+    }
+  }
+}

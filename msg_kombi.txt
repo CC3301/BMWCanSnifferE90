@@ -1,0 +1,10 @@
+Can-ID 	Length 	DATA Packet HEX 	        DATA Packet DECIMAL 	            Register Description 	Reg 	Mini 	        Kcan-1 	KCan-2 	Source
+0x1B4 	8 	    00 D0 E0 F8 00 32 FE 91 	000 208 224 248 000 050 254 145 	Speed [MPH] Handbrake status 	  	         	Y      	N 	    Kombi
+0x202 	2 	    54 FF 	                    084 255                             Lights (Dimmer Status) 	  	                   	Y 	    Y 	    Kombi
+0x2BA 	5 	    00 00 00 00 10 	            000 000 000 000 16 	                Counter (Toggle / Heartbeat) 	  	  	        Y 	    N 	    Kombi
+0x2CA 	2 	    61 FF 	                    097 255 	                        Outside temperature 	  	  	                Y 	    TBC     Kombi
+0x2F8 	8 	    13 2E 1E 01 4F DC 07 FD 	019 046 030 001 079 220 007 253 	Report Time and Date 	  	  	                Y 	    Y 	    Kombi
+0x328 	6 	    16 83 A2 04 DE 11 	        022 126 244 003 222 017 	        1 Second count from battery removal / reset 	Y 	    Y 	    Kombi
+0x330 	8 	    7A 5A 00 2D 29 2F 9C 34 	122 090 000 045 041 047 156 052 	Odometer, Av Fuel, and Range 	  	  	        Y 	    Y 	    Kombi
+0x362 	7 	    AE F3 1E FF FF FF EA 	    174 241 030 255 255 255 234 	    Average MPH & Average MPG 	  	  	            Y 	    N 	    Kombi
+0x366 	4 	    78 50 14 FC 	            120 080 020 252 	                Ext Temp & Range 	  	  	                    Y 	    N 	    Kombi
