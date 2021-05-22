@@ -1,4 +1,31 @@
 {
+  "0x0A8": {
+    "clen": 8,
+    "desc": "Throttle, Clutch and Brake status",
+    "source": "---",
+    "data_frames": {
+      "1": {
+        "length": 2,
+        "desc": "Torque",
+        "phonetic_name": "engine_torque"
+      },
+      "3": {
+        "length": 2,
+        "desc": "Torque Rounded",
+        "phonetic_name": "engine_torque_rounded"
+      },
+      "5": {
+        "length": 1,
+        "desc": "Clutch Status",
+        "phonetic_name": "clutch_pedal_status"
+      },
+      "7": {
+        "length": 1,
+        "desc": "Brake pedal status",
+        "phonetic_name": "brake_pedal_status"
+      }
+    }
+  },
   "0x1B4": {
     "clen": 8,
     "desc": "Speed in MPH and Handbrake Staus",
@@ -13,6 +40,30 @@
         "length": 1,
         "desc": "Handbrake Status",
         "phonetic_name": "handbrake_status"
+      }
+    }
+  },
+  "0x202": {
+    "clen": 2,
+    "desc": "Lights (Dimmer Status)",
+    "source": "Kombi",
+    "data_frames": {
+      "0": {
+        "length": 2,
+        "desc": "SDimmer Status",
+        "phonetic_name": "lights_dimmer_status"
+      }
+    }
+  },
+  "0x2BA": {
+    "clen": 5,
+    "desc": "Counter (Toggle/Heartbeat)",
+    "source": "Kombi",
+    "data_frames": {
+      "0": {
+        "length": 2,
+        "desc": "SDimmer Status",
+        "phonetic_name": "lights_dimmer_status"
       }
     }
   }

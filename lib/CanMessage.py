@@ -10,17 +10,11 @@ class MessageParser:
     def register_can_message(self, can_message):
         self.can_messages.append(can_message)
 
-    def state(self):
-        return f"Currently registered {len(self.can_messages)} template can messages"
-
     def parse_data_message(self, message):
         for tm in self.can_messages:
             if tm.cid == message.cid:
-                print(f"Parsing message {message.cid}")
                 self.results[self.data_message_counter] = tm.handle_data(message.data)
                 self.data_message_counter += 1
-            else:
-                print(f"Message unknown ({message.cid})")
 
     def result(self):
         return self.results
@@ -50,6 +44,7 @@ class MessageParser:
 
             # register the message itself
             self.register_can_message(message)
+        print(f"Currently registered {len(self.can_messages)} template can messages")
 
 
 class CanMessage:

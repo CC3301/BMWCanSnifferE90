@@ -12,21 +12,22 @@ class CanData:
             reader = csv.reader(f)
 
             for r in reader:
+                if len(r) == 0:
+                    continue
                 cid = r.pop(0)
                 m = SampleMessage(cid, r)
                 self.messages.append(m)
-
-    def state(self):
-        return f"Going to process {len(self.messages)} messages"
+        print("read sample data file")
 
     def process_sample_data(self, message_parser):
+        print(f"Going to process {len(self.messages)} messages")
         for m in self.messages:
             message_parser.parse_data_message(m)
 
         res = message_parser.result()
-        print(res)
         for r in res:
-            Conversions.dispatch(r)
+            pass
+            # Conversions.dispatch(r)
 
 
 class SampleMessage:
